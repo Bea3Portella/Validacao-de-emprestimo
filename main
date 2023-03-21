@@ -1,0 +1,15 @@
+print('\033[33m-='*5)
+print('\033[1;33;40mBANCO BMG\033[m')
+print('\033[33m-=\033[m'*5)
+
+house_value = float(input('Qual o valor da casa? '))
+wage = float(input('Qual o seu salário? '))
+years = int(input('Em quantos anos pretende pagar? '))
+provision = house_value/(years*12)
+
+print('Para pagar uma casa de R${:.2f} em {} anos'.format(house_value, years), end='')
+print(' a prestação será de R${:.2f}'.format(provision))
+if provision <= (30/100)*wage:
+    print('Empréstimo cedido')
+else:
+    print('Empréstimo negado')
